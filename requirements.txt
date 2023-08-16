@@ -2,5 +2,5 @@ tensorflow
 Flask
 numpy
 Pillow
-urllib
+urllib3
 keras
