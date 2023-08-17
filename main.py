@@ -6,6 +6,9 @@ import numpy as np
 import random
 import os
 
+from OpenSSL import SSL
+context = SSL.Context(SSL.PROTOCOL_TLSv1_2)
+
 app = Flask(__name__)
 class_names=[]
 model = load_model('keras_model.h5')
@@ -37,4 +40,4 @@ def predict():
   return jsonify(confidence_score)
 
 if __name__=='__main__':
-    app.run(debug=True,ssl_context='context')
+    app.run(debug=True,ssl_context=context)
