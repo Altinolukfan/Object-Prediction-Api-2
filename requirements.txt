@@ -4,4 +4,3 @@ numpy
 Pillow
 urllib3
 keras
-pyOpenSSL
