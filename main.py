@@ -37,4 +37,4 @@ def predict():
   return jsonify(confidence_score)
 
 if __name__=='__main__':
-    app.run()
+    app.run(debug=True)
