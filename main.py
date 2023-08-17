@@ -39,5 +39,9 @@ def predict():
   os.remove(str(num)+".png")
   return jsonify(confidence_score)
 
+@app.route('/')
+def hello_world():
+  return 'Hello, World!'
+
 #if __name__=='__main__':
     #app.run(debug=True,ssl_context=context)
