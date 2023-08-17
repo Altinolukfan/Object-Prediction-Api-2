@@ -6,8 +6,8 @@ import numpy as np
 import random
 import os
 
-from OpenSSL import SSL
-context = SSL.Context(SSL.PROTOCOL_TLSv1_2)
+#from OpenSSL import SSL
+#context = SSL.Context(SSL.PROTOCOL_TLSv1_2)
 
 app = Flask(__name__)
 class_names=[]
@@ -39,5 +39,5 @@ def predict():
   os.remove(str(num)+".png")
   return jsonify(confidence_score)
 
-if __name__=='__main__':
-    app.run(debug=True,ssl_context=context)
+#if __name__=='__main__':
+    #app.run(debug=True,ssl_context=context)
