@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from keras.models import load_model
 from PIL import Image, ImageOps
-import urllib.request
+import urllib.request as rq
 import numpy as np
 import random
 import os
@@ -23,7 +23,7 @@ def predict():
   link = request.args.get('link')
   #response = request.get(link)
   num = random.random()
-  urllib.request.urlretrieve(link, str(num)+".png")
+  urllib.rq.urlretrieve(link, str(num)+".png")
   img=str(num)+".png"
   image = Image.open(str(img)).convert('RGB')
   size = (224, 224)
