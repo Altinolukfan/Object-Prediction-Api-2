@@ -25,7 +25,7 @@ def predict():
   num = random.random()
   with rq.urlopen(str(link)) as f:
       html = f.read()
-      file = open(str(num)".png", "w")
+      file = open(str(num)+".png", "w")
       file.write(html)
       file.close()
   img=str(num)+".png"
