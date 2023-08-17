@@ -23,7 +23,7 @@ def predict():
   link = request.args.get('link')
   #response = request.get(link)
   num = random.random()
-  urllib.rq.urlretrieve(link, str(num)+".png")
+  rq.urlretrieve(link, str(num)+".png")
   img=str(num)+".png"
   image = Image.open(str(img)).convert('RGB')
   size = (224, 224)
