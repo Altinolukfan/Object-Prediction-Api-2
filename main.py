@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from keras.models import load_model
 from PIL import Image, ImageOps
-import urllib.request as rq
+import urllib3.request as rq
 import numpy as np
 import random
 import os
