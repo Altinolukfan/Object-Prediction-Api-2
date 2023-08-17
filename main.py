@@ -23,7 +23,7 @@ def predict():
   link = request.args.get('link')
   #response = request.get(link)
   num = random.random()
-  with rq.urllib.request.urlopen(str(link)) as f:
+  with rq.urlopen(str(link)) as f:
       html = f.read()
       file = open(str(num)".png", "w")
       file.write(html)
