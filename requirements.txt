@@ -4,3 +4,4 @@ numpy
 Pillow
 urllib3
 keras
+gunicorn
