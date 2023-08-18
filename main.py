@@ -5,6 +5,7 @@ import urllib.request as rq
 import numpy as np
 import random
 import os
+import requests
 
 #from OpenSSL import SSL
 #context = SSL.Context(SSL.PROTOCOL_TLSv1_2)
@@ -23,10 +24,10 @@ def predict():
   link = request.args.get('link')
   #response = request.get(link)
   num = random.random()
-  with rq.urlopen(str(link)) as f:
+  with requests.get(str(link)) as f:
       html = f.read()
       file = open(str(num)+".png", "w")
-      file.write(html)
+      file.write(str(html))
       file.close()
   img=str(num)+".png"
   image = Image.open(str(img)).convert('RGB')
