@@ -22,9 +22,8 @@ class_names=readf.split(",")
 @app.route('/predict')
 def predict():
   link = request.args.get('link')
-  #response = request.get(link)
   num = random.random()
-  response = requests.get(url)
+  response = requests.get(str(link))
   with open(str(num)+".png", "wb") as f:
       f.write(response.content)
       f.close()
