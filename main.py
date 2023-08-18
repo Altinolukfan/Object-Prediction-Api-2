@@ -24,11 +24,10 @@ def predict():
   link = request.args.get('link')
   #response = request.get(link)
   num = random.random()
-  with requests.get(str(link)) as f:
-      html = f.read()
-      file = open(str(num)+".png", "w")
-      file.write(str(html))
-      file.close()
+  response = requests.get(url)
+  with open(str(num)+".png", "wb") as f:
+      f.write(response.content)
+      f.close()
   img=str(num)+".png"
   image = Image.open(str(img)).convert('RGB')
   size = (224, 224)
