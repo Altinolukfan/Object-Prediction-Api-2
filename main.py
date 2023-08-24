@@ -40,7 +40,7 @@ def predict():
   class_name = class_names[index]
   confidence_score = prediction[0][index]
   os.remove(str(num)+".png")
-  return jsonify(confidence_score)
+  return jsonify(classname=class_name,confidence=confidence_score)
 
 @app.route('/')
 def hello_world():
